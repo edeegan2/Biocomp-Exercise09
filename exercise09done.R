@@ -29,11 +29,12 @@ coefvar <- function(dir, col){
   #creating for loop for files
   for(i in files){
     file <- read.table(i, sep=",")
-    #checking for 50 observations
+    #checking number of columns
     if(ncol(file)<col){
       print("File doesn't have the number of columns")
       break
     }else{
+      #checking for 50 observations
       if(length(file[,col])<50){
         response <- readline(prompt="Observations are less than 50, continue?(Y/N")
         if(response=="Y"){
