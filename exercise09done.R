@@ -47,10 +47,7 @@ coefvar <- function(dir, col){
             coef=mean(file[,col])/sd(file[,col])
             #creating results vector
             results=c(results,coef) 
-            
-            
           }
-          
         }else{
           break
         }
@@ -63,12 +60,10 @@ coefvar <- function(dir, col){
           coef=mean(file[,col])/sd(file[,col])
           #creating results vector
           results=c(results,coef) 
-          
-        }
-        
+        } 
       }
     }
-    }
+  }
    
   #returning results
   return(results)   
